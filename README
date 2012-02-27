@@ -1,7 +1,8 @@
 Keyboard event handling, in the case you don't want to use Text Inputs or Text Areas elements (Think canvas).
 This library should be obsolete when DOM 3 TextInput events will be implemented by most browsers.
 
-Keycodes are handled as keysyms, as used by the X11 window system. Typically special keys have a keysym of the form FFxx. By example Backspace is FF08.
+Keycodes are handled as keysyms, as used by the X11 window system.
+Typically special keys have a keysym of the form FFxx. By example Backspace is FF08.
 
 Project originally forked from a part of noVNC (LPGPL-2, LGPL-3) and completed with samples of use.
 Licence is therefore LGPL-3.
