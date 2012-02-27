@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<title>keyEventSample</title>
+<script type="text/javascript" language="javascript"
+	src="noVNC_Util.js"></script>
+<script type="text/javascript" language="javascript"
+	src="noVNC_Input.js"></script>
+
+
+<script type="text/javascript" language="javascript">
+    
+    
+function message(msg) {
+	msgNode = document.createTextNode(msg);
+	br = document.createElement('br');
+	document.body.appendChild(msgNode);
+	document.body.appendChild(br);
+	br.scrollIntoView(true);
+}
+    
+function keyPress(keysym, down, e) {
+    var d = down ? "down" : " up ";
+    msg = ("keyPress " + d + " keysym: " + keysym +
+          " (key: " + e.keyCode + ", char: " + e.charCode +
+          ", which: " + e.which +") if printable char " + String.fromCharCode(keysym));
+    message(msg);
+}
+
+window.onload = function() {
+
+    keyboard = new Keyboard({'target': document,
+                            'onKeyPress': keyPress});
+   
+    keyboard.grab();
+}
+
+
+
+
+
+    
+    
+    </script>
+</head>
+
+<body>
+
+
+</body>
+</html>
